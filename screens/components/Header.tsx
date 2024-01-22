@@ -1,18 +1,19 @@
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons'
+import { useNavigation } from '@react-navigation/native';
 
 type HeaderProps = {
   icon: string,
-  title: string
+  title: string,
+  action: string
 }
 
-const Header = ({ icon, title }: HeaderProps) => {
+const Header = ({ icon, title, action }: HeaderProps) => {
+  const navigation = useNavigation();
   return (
     <View style={styles.headerCont}>
-      <TouchableOpacity onPress={() => {
-        console.log("hello");
-      }}>
+      <TouchableOpacity onPress={() => action ? navigation.goBack() : {}}>
         <Icon style={styles.headerIcon} name={icon} size={20} />
       </TouchableOpacity>
       <Text style={styles.headerText}>{title}</Text>
