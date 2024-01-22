@@ -3,10 +3,10 @@ import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-nati
 import Header from './components/Header';
 import Icon from 'react-native-vector-icons/Ionicons';
 
-const HomeScreen = () => {
+const HomeScreen = ({ navigation }: any) => {
   return (
     <View>
-      <Header icon="reorder-three" title="My Notes" />
+      <Header icon="reorder-three" title="My Notes" action=""/>
       <ScrollView>
         <View style={styles.homeContent}>
           <View style={styles.homeItem}>
@@ -46,9 +46,7 @@ const HomeScreen = () => {
           </View>
         </View>
       </ScrollView>
-      <TouchableOpacity style={styles.homeBtn} onPress={() => {
-        console.log("Add!");
-      }}>
+      <TouchableOpacity style={styles.homeBtn} onPress={() => navigation.navigate("Add")}>
         <Icon style={styles.homeBtnIcon} name='create' size={20} />
       </TouchableOpacity>
     </View>
