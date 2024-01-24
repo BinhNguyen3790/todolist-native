@@ -6,7 +6,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 const HomeScreen = ({ navigation }: any) => {
   return (
     <View>
-      <Header icon="reorder-three" title="My Notes" action=""/>
+      <Header icon="reorder-three" title="My Notes" action="" />
       <ScrollView>
         <View style={styles.homeContent}>
           <View style={styles.homeItem}>
@@ -87,13 +87,16 @@ const styles = StyleSheet.create({
   homeItemTtl: {
     fontWeight: "700",
     fontSize: 18,
-    marginBottom: 5
+    marginBottom: 5,
+    color: "white"
   },
   homeItemTxt: {
-    marginBottom: 10
+    marginBottom: 10,
+    color: "white"
   },
   homeItemIcon: {
-    alignSelf: "flex-end"
+    alignSelf: "flex-end",
+    color: "white"
   }
 })
 
