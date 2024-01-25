@@ -30,11 +30,13 @@ const styles = StyleSheet.create({
     justifyContent: "space-between"
   },
   headerIcon: {
-    fontSize: 30
+    fontSize: 30,
+    color:"white"
   },
   headerText: {
     fontWeight: "700",
-    fontSize: 20
+    fontSize: 20,
+    color:"white"
   }
 })
 
